@@ -23,13 +23,17 @@ def analysis(subject):
 
     dictionary = corpora.Dictionary(corpus) #建立詞袋模型
     doc_vectors = [dictionary.doc2bow(text) for text in corpus]
+    
+    #建立TF-IDF模型
     tfidf = models.TfidfModel(doc_vectors)
     tfidf_vectors = tfidf[doc_vectors]
     print(dictionary)
 
     def articleSim(article):
-        query = tokenization(article)
+        query = tokenization(article) #建立query文本
         query_bow = dictionary.doc2bow(query)
+        
+        #用TF-IDF計算相似度
         index = similarities.MatrixSimilarity(tfidf_vectors)
         sims = index[query_bow]
         return sims
@@ -50,7 +54,7 @@ def analysis(subject):
 
     return result
 
-def tokenization(news):
+def tokenization(news): #用jieba分詞詞並去除停用詞
     result = []
     for word in jieba.cut(news, cut_all=False):
         if word not in stop_flag:
