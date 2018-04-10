@@ -6,8 +6,10 @@
 * Java jre  : 1.8.0_161
 * Zookeeper : 3.4.11
 * Kafka     : 2.11-1.1.0
+* Chromedriver
 
 ## Flow
+* Install [chromedriver]
 * **Refert to [如何在 Windows OS 安裝 Apache Kafka]**
 * Install Java [jre] 
 * Install [Kafka] 
@@ -40,3 +42,4 @@ python analytics.py e
 [pykafka]: https://github.com/dpkp/kafka-python
 [政治]: https://tw.news.yahoo.com/politics/archive
 [娛樂]: https://tw.news.yahoo.com/politics/archive
+[chromedriver]: https://sites.google.com/a/chromium.org/chromedriver/
