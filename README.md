@@ -8,7 +8,6 @@
 * Kafka     : 2.11-1.1.0
 
 ## Flow
-
 * **Refert to [如何在 Windows OS 安裝 Apache Kafka]**
 * Install Java [jre] 
 * Install [Kafka] 
@@ -16,7 +15,7 @@
 1. Start **Zookeeper** and **Kafka**
 2. Create your topics
 ```
-\kafka\bin\windows\kafka-topics.bat --create --zookeeper YOUR_IP:YOUR_PORT --replication-factor 1 --partitions 1 --topic YOU_TOPIC
+\kafka\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic YOUR_TOPIC
 ```
 3. Write the Python web crawler with [pykafka]
 4. Build [TF-IDF] Model for each article
