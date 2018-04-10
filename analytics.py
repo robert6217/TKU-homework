@@ -80,4 +80,4 @@ if __name__ == '__main__':
         print("input the topic")
 
     result = analysis(bytes(topic,'utf-8'))
-    pd.DataFrame(result).to_csv(topic+'.csv',index=False,header=False)
+    pd.DataFrame(result).to_csv(topic+'_top5.csv',index=False,header=False)
